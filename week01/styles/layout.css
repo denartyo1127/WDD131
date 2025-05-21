@@ -1,0 +1,59 @@
+/* General reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+}
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+/* Nav bar styling */
+nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main layout using Flexbox */
+main {
+  display: flex;
+  flex: 1;
+}
+main section {
+  flex: 3;
+  background-color: #ccc;
+  padding: 1em;
+}
+main aside {
+  flex: 1;
+  background-color: white;
+  padding: 1em;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
