@@ -1,4 +1,4 @@
-// Calculate wind chill using Fahrenheit and mph (one line formula)
+
 function calculateWindChill(tempF, windSpeedMph) {
   return (
     35.74 +
@@ -9,22 +9,18 @@ function calculateWindChill(tempF, windSpeedMph) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Static weather data for Hawaii
-  const temperature = 80;  // degrees Fahrenheit
-  const windSpeed = 5;     // mph
+  const temperature = 80; 
+  const windSpeed = 5;    
 
-  // DOM elements
   const windChillElement = document.getElementById("windChill");
   const tempElement = document.getElementById("temperature");
   const windSpeedElement = document.getElementById("windSpeed");
   const yearSpan = document.getElementById("year");
   const lastModifiedSpan = document.getElementById("lastModified");
 
-  // Display static temperature and wind speed
   if (tempElement) tempElement.textContent = temperature;
   if (windSpeedElement) windSpeedElement.textContent = windSpeed;
 
-  // Wind chill condition check
   if (windChillElement) {
     if (temperature <= 50 && windSpeed > 3) {
       windChillElement.textContent = calculateWindChill(temperature, windSpeed);
@@ -33,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Footer: current year and last modified date
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
   if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 });
