@@ -1,3 +1,17 @@
+
+:root {
+  --main-bg: #fffbea;
+  --accent-color: #ff5722;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+.weather {
+  border-left: 6px solid var(--accent-color);
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,6 +49,13 @@ h1 {
   border-radius: 10px;
 }
 
+.activities {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-area: 1/1;
+}
+
 .weather {
   max-width: 420px;
   margin: 0 auto 2rem;
@@ -66,3 +87,23 @@ a:focus, button:focus {
   outline: 2px solid #ff5722;
   outline-offset: 3px;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .weather {
+    margin: 1rem;
+  }
+}
+
+h1::after {
+  content: ' 🌺';
+  display: inline-block;
+}
+
