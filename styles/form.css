@@ -1,0 +1,137 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2a6592;
+}
+
+form label,
+form legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #2a6592;
+}
+
+form label span[aria-hidden="true"] {
+  color: #d9534f;
+  margin-left: 0.25rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2a6592;
+  box-shadow: 0 0 5px rgba(42, 101, 146, 0.5);
+}
+
+fieldset {
+  border: none;
+  margin: 1rem 0 1.5rem 0;
+  padding: 0;
+}
+
+fieldset legend {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+fieldset label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: #2a6592;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 1.5rem auto 0 auto;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #204c6b;
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  fieldset label {
+    display: block;
+    margin-right: 0;
+  }
+
+  input[type="submit"] {
+    max-width: 100%;
+  }
+}

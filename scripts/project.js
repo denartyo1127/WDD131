@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // DOM interaction, conditional, array, template literals
   const tips = [
     "Take a short walk today.",
     "Try 4-4-4 breathing: Inhale, hold, exhale each for 4 seconds.",
