@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Review Submitted</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You for Your Review</title>
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <main>
-    <h1>Thank you for your review!</h1>
-    <p>Your review has been successfully submitted.</p>
-    <p id="submissionCount"></p>
+    <h1>Thank You!</h1>
+    <p>Your review has been submitted successfully.</p>
+    <p id="reviewCountMessage"></p>
     <a href="form.html">Submit another review</a>
   </main>
 
@@ -19,14 +19,13 @@
   </footer>
 
   <script>
-    // Read count from localStorage, increment it, and save it back
-    let count = localStorage.getItem('reviewCount');
-    count = count ? parseInt(count) + 1 : 1;
-    localStorage.setItem('reviewCount', count);
+    // Increment review count
+    const reviewCount = parseInt(localStorage.getItem("reviewCount")) || 0;
+    localStorage.setItem("reviewCount", reviewCount + 1);
 
-    // Display the count
-    document.getElementById('submissionCount').textContent =
-      `Total reviews submitted from this browser: ${count}`;
+    // Show message
+    document.getElementById("reviewCountMessage").textContent =
+      `You have submitted ${reviewCount + 1} review(s).`;
   </script>
 </body>
 </html>
